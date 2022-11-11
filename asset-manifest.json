@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/morthenjo.github.io/learning-journal/static/css/main.96f59a1a.css",
+    "main.js": "/morthenjo.github.io/learning-journal/static/js/main.da0805fc.js",
+    "index.html": "/morthenjo.github.io/learning-journal/index.html",
+    "main.96f59a1a.css.map": "/morthenjo.github.io/learning-journal/static/css/main.96f59a1a.css.map",
+    "main.da0805fc.js.map": "/morthenjo.github.io/learning-journal/static/js/main.da0805fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96f59a1a.css",
+    "static/js/main.da0805fc.js"
+  ]
+}
