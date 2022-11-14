@@ -1,8 +1,11 @@
+import { HashRouter } from "react-router-dom";
+import NavBar from "./components/navBar/NavBar";
+
 const LandingPage = () => {
   return (
-    <>
-      <h1>bruh</h1>
-    </>
+    <HashRouter>
+      <NavBar />
+    </HashRouter>
   );
 };
 
