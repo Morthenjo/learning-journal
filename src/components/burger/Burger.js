@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Burger = styled.div`
-  /* display: none; */
+  display: none;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -9,7 +9,8 @@ export const Burger = styled.div`
     height: 0.3rem;
     width: 3rem;
     position: absolute;
-    right: 1rem;
+    right: 2rem;
+    top: -3rem;
     animation: ${(props) =>
       props.active
         ? "yeet 1s ease 0s alternate both "
@@ -50,7 +51,7 @@ export const Burger = styled.div`
     }
     to {
       top: -1.5rem;
-      right: 3.5rem;
+      right: 1.5rem;
       transform: rotate(-45deg);
     }
   }
@@ -59,7 +60,7 @@ export const Burger = styled.div`
     }
     100% {
       top: -1.5rem;
-      right: 3.5rem;
+      right: 1.5rem;
       transform: rotate(45deg);
     }
   }
@@ -68,7 +69,7 @@ export const Burger = styled.div`
       transform: rotate(-45deg);
 
       top: -1.5rem;
-      right: 3.5rem;
+      right: 1.5rem;
     }
     to {
     }
@@ -78,7 +79,7 @@ export const Burger = styled.div`
       transform: rotate(45deg);
 
       top: -1.5rem;
-      right: 3.5rem;
+      right: 1.5rem;
     }
     to {
     }
@@ -86,22 +87,22 @@ export const Burger = styled.div`
 
   @keyframes yeet {
     from {
-      right: 4rem;
-      top: 4rem;
+      right: 2rem;
+      top: 2rem;
     }
     to {
-      top: 4rem;
+      top: 2rem;
       background: rgba(0, 0, 0, 0);
     }
   }
   @keyframes yeet-after {
     from {
-      top: 4rem;
+      top: 2rem;
       background: rgba(0, 0, 0, 0);
     }
     to {
-      right: 4rem;
-      top: 4rem;
+      right: 2rem;
+      top: 2rem;
     }
   }
 `;

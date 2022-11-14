@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  height: 85px;
-  display: ${(props) => (props.active ? "flex" : "hidden")};
+  height: 4rem;
+  background-color: red;
+  display: ${(props) => (props.active ? "flex" : "none")};
   justify-content: left;
   padding: 1rem;
   z-index: 12;
@@ -25,7 +26,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const NavLogo = styled.img`
-  margin-top: 1rem;
+  margin-top: 0rem;
   height: 2rem;
 `;
 
@@ -38,9 +39,6 @@ export const NavMenu = styled.div`
   /* Third Nav */
   /* width: 100vw;
   white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtn = styled.nav`
@@ -50,9 +48,6 @@ export const NavBtn = styled.nav`
   /* Third Nav */
   /* justify-content: flex-end;
   width: 100vw; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtnLink = styled(Link)`
