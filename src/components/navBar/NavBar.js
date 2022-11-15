@@ -20,8 +20,8 @@ const NavBar = () => {
         <NavBarTitle active={active}>My learning Journal</NavBarTitle>
 
         <NavMenu active={active}>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/about">ABOUT</NavLink>
         </NavMenu>
       </Nav>
       <Routes>

@@ -1,9 +1,11 @@
-import { HomePageTitle } from "../components/Styles";
+import { HomePageBG, HomePageTitle } from "../components/Styles";
 
 const HomePage = () => {
   return (
     <>
-      <HomePageTitle>Home</HomePageTitle>
+      <HomePageBG>
+        <HomePageTitle>Home</HomePageTitle>
+      </HomePageBG>
     </>
   );
 };

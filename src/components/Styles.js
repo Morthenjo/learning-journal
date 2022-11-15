@@ -11,24 +11,31 @@ export const Nav = styled.nav`
   justify-content: left;
   padding: 1rem;
   transition: all 1s;
+  @media (min-width: 768px) {
+    width: 80%;
+    background-color: red;
+    margin: 0 10%;
+    height: 7rem;
+  }
 `;
 
 export const NavLink = styled(Link)`
-  color: #808080;
-  display: flex;
+  color: black;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #000000;
+    color: grey;
   }
 `;
 
 export const NavLogo = styled.img`
   margin-top: 0rem;
   height: 1rem;
+  @media (min-width: 768px) {
+    height: 2rem;
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -37,30 +44,13 @@ export const NavMenu = styled.div`
   justify-content: center;
   position: absolute;
   transition: 1s;
+  gap: 1rem;
+  margin-left: 2rem;
   @media (min-width: 768px) {
-    display: flex;
-  }
-`;
-
-export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-right: 24px;
-`;
-
-export const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: #808080;
-  color: #000000;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #808080;
+    transform: none;
+    right: 0;
+    margin-right: 2rem;
+    gap: 2rem;
   }
 `;
 
@@ -70,8 +60,49 @@ export const NavBarTitle = styled.h3`
   margin-left: 1rem;
   transition: 1s;
   margin-top: 0;
+  @media (min-width: 768px) {
+    margin-top: -0.5rem;
+  }
 `;
 
-export const HomePageTitle = styled.h1`
-  margin-top: 10rem;
+export const HomePageTitle = styled.h1``;
+
+export const HomePageBG = styled.div`
+  padding: 10rem 10% 0;
+`;
+
+export const Box = styled.div`
+  padding: 0 10%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  margin-bottom: -1.2rem;
+`;
+
+export const AboutImgDiv = styled.div`
+  width: 50%;
+  margin-top: 4rem;
+  border-radius: 50% 50% 0 0;
+  margin-bottom: 1rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+  background-size: 100% 100%;
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 `;

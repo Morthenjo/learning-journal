@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Burger = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 767px) {
     display: block;
     background: black;
     height: 0.2rem;
