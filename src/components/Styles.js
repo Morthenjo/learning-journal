@@ -12,10 +12,8 @@ export const Nav = styled.nav`
   padding: 1rem;
   transition: all 1s;
   @media (min-width: 768px) {
-    width: 80%;
-    background-color: red;
-    margin: 0 10%;
-    height: 7rem;
+    width: 100%;
+    height: 4rem;
   }
 `;
 
@@ -72,7 +70,7 @@ export const HomePageBG = styled.div`
 `;
 
 export const Box = styled.div`
-  padding: 0 10%;
+  padding: 5rem 10% 0;
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -88,21 +86,68 @@ export const Image = styled.img`
 
 export const AboutImgDiv = styled.div`
   width: 50%;
-  margin-top: 4rem;
   border-radius: 50% 50% 0 0;
   margin-bottom: 1rem;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  animation: gradient 15s ease infinite;
-  background-size: 100% 100%;
+  background-size: 400% 400%;
+  animation: gradient 2s infinite;
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+      background-position: 100% 75%;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 1% 50%;
     }
   }
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+`;
+
+export const StyledA = styled.a`
+  margin-right: 2rem;
+`;
+
+export const AboutH1 = styled.h1`
+  margin: 0;
+`;
+
+export const AboutP = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 2rem;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
+export const AboutH3 = styled.h3``;
+
+export const FooterDiv = styled.div`
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 6rem;
+`;
+
+export const FooterH3 = styled.h3`
+  margin: 2rem 0 0.3rem 0;
+  font-size: 0.7rem;
+`;
+
+export const FooterP = styled.p`
+  margin: 0;
+  font-size: 0.7rem;
 `;
