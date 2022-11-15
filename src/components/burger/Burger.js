@@ -6,11 +6,11 @@ export const Burger = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     background: black;
-    height: 0.3rem;
-    width: 3rem;
+    height: 0.2rem;
+    width: 1.5rem;
+    margin-top: -0.5rem;
     position: absolute;
-    right: 2rem;
-    top: -3rem;
+    z-index: 3;
     animation: ${(props) =>
       props.active
         ? "yeet 1s ease 0s alternate both "
@@ -20,14 +20,14 @@ export const Burger = styled.div`
       content: "";
       background: black;
       position: absolute;
-      height: 3rem;
-      width: 0.3rem;
+      height: 1.5rem;
+      width: 0.2rem;
       z-index: 3;
     }
 
     &:before {
-      right: 1.3rem;
-      top: 0;
+      right: 0.65rem;
+      top: -0.2rem;
       transform: rotate(90deg);
       animation: ${(props) =>
         props.active
@@ -36,8 +36,8 @@ export const Burger = styled.div`
     }
 
     &:after {
-      right: 1.3rem;
-      top: -2.5rem;
+      right: 0.65rem;
+      top: -1.15rem;
       transform: rotate(-90deg);
       animation: ${(props) =>
         props.active
@@ -47,20 +47,26 @@ export const Burger = styled.div`
   }
 
   @keyframes top {
-    from {
+    0% {
     }
-    to {
-      top: -1.5rem;
-      right: 1.5rem;
+    20% {
+      top: -0.6rem;
+    }
+    100% {
+      top: -0.6rem;
+      right: 0.6rem;
       transform: rotate(-45deg);
     }
   }
   @keyframes bottom {
     0% {
     }
+    20% {
+      top: -0.6rem;
+    }
     100% {
-      top: -1.5rem;
-      right: 1.5rem;
+      top: -0.6rem;
+      right: 0.6rem;
       transform: rotate(45deg);
     }
   }
@@ -68,8 +74,11 @@ export const Burger = styled.div`
     from {
       transform: rotate(-45deg);
 
-      top: -1.5rem;
-      right: 1.5rem;
+      top: -0.6rem;
+      right: 0.6rem;
+    }
+    80% {
+      top: -0.6rem;
     }
     to {
     }
@@ -78,8 +87,11 @@ export const Burger = styled.div`
     from {
       transform: rotate(45deg);
 
-      top: -1.5rem;
-      right: 1.5rem;
+      top: -0.6rem;
+      right: 0.6rem;
+    }
+    80% {
+      top: -0.6rem;
     }
     to {
     }
@@ -87,10 +99,11 @@ export const Burger = styled.div`
 
   @keyframes yeet {
     from {
-      right: 2rem;
+      right: 1rem;
       top: 2rem;
     }
     to {
+      right: 1rem;
       top: 2rem;
       background: rgba(0, 0, 0, 0);
     }
@@ -98,11 +111,16 @@ export const Burger = styled.div`
   @keyframes yeet-after {
     from {
       top: 2rem;
+      right: 1rem;
       background: rgba(0, 0, 0, 0);
     }
+    90% {
+      background: rgba(0, 0, 0, 0.5);
+    }
     to {
-      right: 2rem;
+      right: 1rem;
       top: 2rem;
+      background: rgba(0, 0, 0, 1);
     }
   }
 `;

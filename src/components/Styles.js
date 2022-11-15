@@ -3,13 +3,14 @@ import { NavLink as Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   height: 4rem;
-  background-color: red;
-  display: ${(props) => (props.active ? "flex" : "none")};
+  position: absolute;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  display: flex;
   justify-content: left;
   padding: 1rem;
-  z-index: 12;
-  /* Third Nav */
-  /* justify-content: flex-start; */
+  transition: all 1s;
 `;
 
 export const NavLink = styled(Link)`
@@ -27,44 +28,50 @@ export const NavLink = styled(Link)`
 
 export const NavLogo = styled.img`
   margin-top: 0rem;
-  height: 2rem;
+  height: 1rem;
 `;
 
 export const NavMenu = styled.div`
   display: flex;
-  align-items: center;
-  margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
+  transform: ${(props) => (props.active ? "none" : "translateY(-10rem)")};
+  justify-content: center;
+  position: absolute;
+  transition: 1s;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
 `;
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
   background: #808080;
-  padding: 10px 22px;
   color: #000000;
   outline: none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  /* Second Nav */
-  margin-left: 24px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #808080;
   }
+`;
+
+export const NavBarTitle = styled.h3`
+  transform: ${(props) => (props.active ? "translateY(-10rem)" : "none")};
+  width: 50%;
+  margin-left: 1rem;
+  transition: 1s;
+  margin-top: 0;
+`;
+
+export const HomePageTitle = styled.h1`
+  margin-top: 10rem;
 `;
