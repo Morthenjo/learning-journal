@@ -76,7 +76,7 @@ export const Box = styled.div`
   gap: 2rem;
   flex-direction: column;
   @media (min-width: 768px) {
-    padding: 8rem 10%;
+    padding: 8rem 10% 0;
   }
 `;
 
@@ -176,4 +176,13 @@ export const AboutSection = styled.section`
 
 export const AboutH2 = styled.h2`
   text-align: center;
+`;
+
+export const BlogFlex = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 `;

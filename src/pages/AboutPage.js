@@ -6,6 +6,7 @@ import {
   AboutImgDiv,
   AboutP,
   AboutSection,
+  BlogFlex,
   Box,
   Flex,
   FlexRow,
@@ -13,8 +14,22 @@ import {
   StyledA,
 } from "../components/Styles";
 import Morthen from "../components/images/morthen.png";
+import BlogData from "../components/blogposts/BlogData";
+import BlogSection from "../components/blogposts/Blog";
 
 const AboutPage = () => {
+  const Blogs = BlogData.filter((item, idx) => idx < 3).map((item) => {
+    return (
+      <BlogSection
+        key={item.id}
+        img={item.img}
+        title={item.title}
+        time={item.time}
+        text={item.text}
+      />
+    );
+  });
+
   return (
     <>
       <Box>
@@ -76,6 +91,7 @@ const AboutPage = () => {
             </AboutP>
           </AboutSection>
           <AboutH2>Recent Posts</AboutH2>
+          <BlogFlex>{Blogs}</BlogFlex>
         </Flex>
       </Box>
     </>
