@@ -16,9 +16,18 @@ import {
 import Morthen from "../components/images/morthen.png";
 import BlogData from "../components/blogposts/BlogData";
 import BlogSection from "../components/blogposts/Blog";
+import { useState } from "react";
 
 const AboutPage = () => {
-  const Blogs = BlogData.filter((item, idx) => idx < 3).map((item) => {
+  let [active, setActive] = useState(true);
+
+  const toggleHandler = () => {
+    setActive(!active);
+  };
+
+  const Blogs = BlogData.filter(
+    (item, idx) => idx < (active ? 3 : BlogData.length)
+  ).map((item) => {
     return (
       <BlogSection
         key={item.id}
@@ -92,6 +101,7 @@ const AboutPage = () => {
           </AboutSection>
           <AboutH2>Recent Posts</AboutH2>
           <BlogFlex>{Blogs}</BlogFlex>
+          <button onClick={toggleHandler}>Display more</button>
         </Flex>
       </Box>
     </>

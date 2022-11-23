@@ -186,3 +186,16 @@ export const BlogFlex = styled.div`
     width: 100%;
   }
 `;
+
+export const DisplayButton = styled.button`
+  width: 50%;
+  @media (min-width: 768px) {
+  }
+`;
+
+export const FrontPageHeader = styled.header`
+  width: 100%;
+
+  @media (min-width: 768px) {
+  }
+`;
