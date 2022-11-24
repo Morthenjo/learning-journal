@@ -32,13 +32,6 @@ const HomePage = () => {
     );
   });
   return (
-    // {
-    //   id: 0,
-    //   img: "https://source.unsplash.com/random/?funhouse",
-    //   time: "02.03.2022",
-    //   title: "My new journey as a bootcamp student",
-    //   text: "After several months of learning in the Frontend Developer Career Path, I've made a couple of projects and even a portfolio",
-    // },
     <>
       <FrontPageHeader>
         <FrontPageH3>02.03.2022</FrontPageH3>
