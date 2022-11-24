@@ -188,14 +188,50 @@ export const BlogFlex = styled.div`
 `;
 
 export const DisplayButton = styled.button`
-  width: 50%;
+  margin: -1rem auto 2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background: white;
+  transition: all 0.3s;
+  :hover {
+    background: gray;
+  }
   @media (min-width: 768px) {
   }
 `;
 
 export const FrontPageHeader = styled.header`
   width: 100%;
+  background: url("https://source.unsplash.com/random/?cat") center center
+    no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  padding: 30vh 1rem 0;
+  height: 50vh;
+  @media (min-width: 768px) {
+    padding-left: 10%;
+  }
+`;
 
+export const FrontPageH1 = styled.h1`
+  padding: 0;
+  margin: 0 0 1rem;
+  @media (min-width: 768px) {
+  }
+`;
+
+export const FrontPageP = styled.p`
+  padding: 0;
+  margin: 0;
+  @media (min-width: 768px) {
+  }
+`;
+
+export const FrontPageH3 = styled.h3`
+  padding: 0;
+  margin: 0;
   @media (min-width: 768px) {
   }
 `;

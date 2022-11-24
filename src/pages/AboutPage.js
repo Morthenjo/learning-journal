@@ -8,6 +8,7 @@ import {
   AboutSection,
   BlogFlex,
   Box,
+  DisplayButton,
   Flex,
   FlexRow,
   Image,
@@ -101,7 +102,9 @@ const AboutPage = () => {
           </AboutSection>
           <AboutH2>Recent Posts</AboutH2>
           <BlogFlex>{Blogs}</BlogFlex>
-          <button onClick={toggleHandler}>Display more</button>
+          <DisplayButton onClick={toggleHandler}>
+            {active ? "View More" : "View Less"}
+          </DisplayButton>
         </Flex>
       </Box>
     </>

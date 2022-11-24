@@ -32,5 +32,8 @@ export const BlogParagraph = styled.p`
 `;
 
 export const BlogBox = styled.div`
-  margin: auto;
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    width: 30%;
+  }
 `;
